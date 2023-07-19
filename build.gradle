@@ -9,9 +9,9 @@ group 'guru.qa'
 version '1.0'
 
 dependencies {
-    testImplementation (
-            'org.junit.jupiter:junit-jupiter:5.9.3',
-           'com.codeborne:selenide:6.16.0'
+    testImplementation(
+            'com.codeborne:selenide:6.16.0',
+            'org.junit.jupiter:junit-jupiter:5.9.3'
     )
 }
 test {
