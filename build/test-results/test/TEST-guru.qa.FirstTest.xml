@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="guru.qa.FirstTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-07-19T20:17:25" hostname="DESKTOP-BJ6EUG2" time="0.012">
+  <properties/>
+  <testcase name="thirdTest()" classname="guru.qa.FirstTest" time="0.009"/>
+  <testcase name="firsTest()" classname="guru.qa.FirstTest" time="0.0"/>
+  <testcase name="secondTest()" classname="guru.qa.FirstTest" time="0.001"/>
+  <system-out><![CDATA[        BeforeAll
+    BeforeEach
+        thirdTest
+    AfterEach
+    BeforeEach
+        firsTest
+    AfterEach
+    BeforeEach
+        secondTest
+    AfterEach
+        AfterAll
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
