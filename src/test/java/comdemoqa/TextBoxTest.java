@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TextBoxTest {
     @BeforeAll
     static void BeforeAll() {
-        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
     }
