@@ -29,7 +29,7 @@ static void BeforeAll() {
         $(".react-datepicker__day--012").click();
         $("#subjectsInput").setValue("Chemistry").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
-       // $("#uploadPicture").uploadFromClasspath("qa-dev.png");
+        $("#uploadPicture").uploadFromClasspath("IMG_7098.JPG");
         $("#currentAddress").setValue("Moscow");
         $("#stateCity-wrapper #state").click();
         $("#state").$(byText("NCR")).click();
