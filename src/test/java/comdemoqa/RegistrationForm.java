@@ -48,7 +48,7 @@ static void BeforeAll() {
         $x("//td[contains(text(), 'Date of Birth')]/../td[2]").shouldHave(text("12 April,1992"));
         $x("//td[contains(text(), 'Subjects')]/../td[2]").shouldHave(text("Chemistry"));
         $x("//td[contains(text(), 'Hobbies')]/../td[2]").shouldHave(text("Sports"));
-       // $x("//td[contains(text(), 'Picture')]/../td[2]").shouldHave(text("Sports"));
+        $x("//td[contains(text(), 'Picture')]/../td[2]").shouldHave(text("IMG_7098.JPG"));
         $x("//td[contains(text(), 'Address')]/../td[2]").shouldHave(text("Moscow"));
         $x("//td[contains(text(), 'State and City')]/../td[2]").shouldHave(text("NCR Noida"));
 
