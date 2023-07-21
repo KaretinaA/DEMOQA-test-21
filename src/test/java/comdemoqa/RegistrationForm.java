@@ -1,23 +1,31 @@
 package comdemoqa;
-import com.codeborne.selenide.SelenideElement;
+//import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
 
 
-public class RegistrationForm {  @BeforeAll
-static void BeforeAll() {
-    Configuration.baseUrl = "https://demoqa.com";
-    Configuration.browserSize = "1920x1080";
-    Configuration.pageLoadStrategy = "eager";
-}
+
+public class RegistrationForm {
+    @BeforeAll
+    static void beforeAll() {
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
+    }
+
     @Test
     void fillFormTest() {
         open("/automation-practice-form");
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+
         $("#firstName").setValue("Anna");
         $("#lastName").setValue("Karetina");
         $("#userEmail").setValue("Anna@mail.ru");
@@ -39,8 +47,7 @@ static void BeforeAll() {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
 
-      // $("#example-modal-sizes-title-lg #table-responsive").$(byText("studentName")).shouldHave(text("Anna Karetina"));
-      // $(".table-responsive").$(byText("studentName")).shouldHave(text("Anna Karetina"));
+
         $x("//td[contains(text(), 'Student Name')]/../td[2]").shouldHave(text("Anna Karetina"));
         $x("//td[contains(text(), 'Student Email')]/../td[2]").shouldHave(text("Anna@mail.ru"));
         $x("//td[contains(text(), 'Gender')]/../td[2]").shouldHave(text("Female"));
