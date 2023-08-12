@@ -1,4 +1,4 @@
-package comdemoqa;
+package comdemoqa.tests;
 
 //import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.Configuration;
