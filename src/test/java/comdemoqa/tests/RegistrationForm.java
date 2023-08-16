@@ -21,7 +21,7 @@ public class RegistrationForm extends TestBase {
       .setUserNumber("8925150417")
       .setBirthDate("12","April", "1992")
       .setSubjects("Chemistry")
-      .setHobbies("Sports")
+      .setHobbiesWrapper("Sports")
       .UploadPicture("IMG_7098.JPG")
       .setCurrentAddress("Moscow")
       .selectState("NCR")

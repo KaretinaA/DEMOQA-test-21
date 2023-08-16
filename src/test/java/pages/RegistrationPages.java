@@ -16,7 +16,7 @@ public class RegistrationPages {
             userNumberInput = $("#userNumber"),
             birthDateInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
-            hobbiesInput = $("#hobbiesInput"),
+            hobbiesWrapperInput = $("#hobbiesWrapper"),
             uploadPicture = $("#uploadPicture"),
             currentAddressInput = $("#currentAddress"),
             state = $("#state"),
@@ -72,8 +72,8 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages setHobbies(String value) {
-        hobbiesInput.setValue(value);
+    public RegistrationPages setHobbiesWrapper(String value) {
+        hobbiesWrapperInput.setValue(value);
         return this;
     }
 
@@ -102,9 +102,6 @@ public class RegistrationPages {
         return this;
     }
 
-    //public RegistrationPages checkResult(String value) {
-    //  $("#example-modal-sizes-title-lg").shouldHave(text(value));
-    //return this;
     public RegistrationPages checkResult(String value) {
         checkResult.shouldHave(text(value));
         return this;
