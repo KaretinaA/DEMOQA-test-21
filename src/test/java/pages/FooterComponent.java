@@ -3,7 +3,7 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 public class FooterComponent {
 
 
-        public void deletedFooter() {
+        public void deleteFooter() {
             executeJavaScript("$('#fixedban').remove()");
             executeJavaScript("$('footer').remove()");
         }

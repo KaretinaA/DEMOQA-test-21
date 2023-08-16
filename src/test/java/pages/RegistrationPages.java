@@ -19,10 +19,11 @@ public class RegistrationPages {
             hobbiesWrapperInput = $("#hobbiesWrapper"),
             uploadPicture = $("#uploadPicture"),
             currentAddressInput = $("#currentAddress"),
-            state = $("#state"),
-            sity = $("#sity"),
+            stateInputSelector = $("#state"),
+            cityInputSelector = $("#city"),
             submitButton = $("#submit"),
-            checkResult = $("#example-modal-sizes-title-lg");
+            tableHeading = $("#example-modal-sizes-title-lg"),
+            tableBody = $(".table-responsive");
 
 
     public RegistrationPages openPage() {
@@ -31,8 +32,8 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages deletedFooter() {
-        footerComponent.deletedFooter();
+    public RegistrationPages deleteFooter() {
+        footerComponent.deleteFooter();
         return this;
     }
 
@@ -69,11 +70,12 @@ public class RegistrationPages {
 
     public RegistrationPages setSubjects(String value) {
         subjectsInput.setValue(value);
+        subjectsInput.pressEnter();
         return this;
     }
 
     public RegistrationPages setHobbiesWrapper(String value) {
-        hobbiesWrapperInput.setValue(value);
+        hobbiesWrapperInput.$(byText(value)).click();
         return this;
     }
 
@@ -88,12 +90,14 @@ public class RegistrationPages {
     }
 
     public RegistrationPages selectState(String value) {
-        state.$(byText(value)).click();
+        stateInputSelector.click();
+        stateInputSelector.$(byText(value)).click();
         return this;
     }
 
-    public RegistrationPages selectSity(String value) {
-        sity.$(byText(value)).click();
+    public RegistrationPages selectCity(String value) {
+        cityInputSelector.click();
+        cityInputSelector.$(byText(value)).click();
         return this;
     }
 
@@ -102,8 +106,12 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages checkResult(String value) {
-        checkResult.shouldHave(text(value));
+    public RegistrationPages checkTableHeading(String value) {
+        tableHeading.shouldHave(text(value));
+        return this;
+    }
+    public RegistrationPages checkTableBody(String value) {
+        tableBody.shouldHave(text(value));
         return this;
     }
 }
