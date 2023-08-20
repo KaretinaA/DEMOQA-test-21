@@ -21,6 +21,7 @@ public class TextBoxTestPages {
         open("/text-box");
         return this;
     }
+
     public TextBoxTestPages deleteFooter() {
         footerComponent.deleteFooter();
         return this;

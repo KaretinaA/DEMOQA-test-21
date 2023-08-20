@@ -1,5 +1,7 @@
 package pages;
+
 import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -12,7 +14,7 @@ public class RegistrationPages {
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
-            genterWrapperInput = $("#genterWrapper"),
+            genderWrapperInput = $("#genterWrapper"),
             userNumberInput = $("#userNumber"),
             birthDateInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
@@ -52,8 +54,8 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages setGenterWrapper(String value) {
-        genterWrapperInput.$(byText(value)).click();
+    public RegistrationPages setGenderWrapper(String value) {
+        genderWrapperInput.$(byText(value)).click();
         return this;
     }
 
@@ -79,7 +81,7 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages UploadPicture(String value) {
+    public RegistrationPages uploadPicture(String value) {
         uploadPicture.uploadFromClasspath(value);
         return this;
     }
@@ -99,6 +101,7 @@ public class RegistrationPages {
         cityInputSelector.click();
         cityInputSelector.$(byText(value)).click();
         return this;
+
     }
 
     public RegistrationPages setSubmitButton() {
@@ -110,6 +113,7 @@ public class RegistrationPages {
         tableHeading.shouldHave(text(value));
         return this;
     }
+
     public RegistrationPages checkTableBody(String value) {
         tableBody.shouldHave(text(value));
         return this;
