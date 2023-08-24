@@ -18,8 +18,5 @@ public class TextBoxTest extends TestBase {
                 .setSubmitButton();
 
         textBoxTestPages.checkResult("Anna");
-        // $("#output").$("#name").shouldHave(text("Anna"));
-
-
     }
 }

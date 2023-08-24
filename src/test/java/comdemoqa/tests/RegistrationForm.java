@@ -2,6 +2,7 @@ package comdemoqa.tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPages;
+import static utils.JavaFaker.*;
 
 public class RegistrationForm extends TestBase {
     RegistrationPages registrationPages = new RegistrationPages();
@@ -11,32 +12,34 @@ public class RegistrationForm extends TestBase {
     void fillFormTest() {
         registrationPages.openPage()
                 .deleteFooter()
-                .setFirstName("Anna")
-                .setLastName("Karetina")
-                .setUserEmail("Anna@mail.ru")
-                .setGenderWrapper("Female")
-                .setUserNumber("8925150417")
-                .setBirthDate("12", "April", "1992")
-                .setSubjects("Chemistry")
-                .setHobbiesWrapper("Sports")
-                .uploadPicture("IMG_7098.JPG")
-                .setCurrentAddress("Moscow")
-                .selectState("NCR")
-                .selectCity("Gurgaon")
+                .setFirstName(firstNameValue)
+                .setLastName(lastNameValue)
+                .setUserEmail(emailValue)
+                .setGenderWrapper(genderValue)
+                .setUserNumber(phoneNumber)
+                .setBirthDate(monthValue, yearValue, dayValue)
+                .setSubjects(subjectsValue)
+                .setHobbiesWrapper(hobbiesValue)
+                .uploadPicture(fileNameValue)
+                .setCurrentAddress(addressValue)
+                .selectState(stateValue)
+                .selectCity(cityValue)
                 .setSubmitButton();
 
-        registrationPages.checkTableHeading("Thanks for submitting the form")
-                .checkTableBody("Anna Karetina")
-                .checkTableBody("Anna@mail.ru")
-                .checkTableBody("Female")
-                .checkTableBody("8925150417")
-                .checkTableBody("12 April,1992")
-                .checkTableBody("Chemistry")
-                .checkTableBody("Sports")
-                .checkTableBody("IMG_7098.JPG")
-                .checkTableBody("Moscow")
-                .checkTableBody("NCR Gurgaon");
+        registrationPages.checkTableHeading("Thanks for submitting the form");
 
+
+        registrationPages.
+                 checkTableBody(firstNameValue + " " + lastNameValue)
+                .checkTableBody( emailValue)
+                .checkTableBody(genderValue)
+                .checkTableBody( phoneNumber)
+                .checkTableBody(dayValue + " " + monthValue + "," + yearValue)
+                .checkTableBody( subjectsValue)
+                .checkTableBody( hobbiesValue)
+                .checkTableBody(fileNameValue)
+                .checkTableBody(addressValue)
+                .checkTableBody( stateValue + " " + cityValue);
 
     }
 }
