@@ -3,6 +3,8 @@ package comdemoqa.tests;
 import org.junit.jupiter.api.Test;
 import pages.TextBoxTestPages;
 
+import static utils.JavaFaker.*;
+
 public class TextBoxTest extends TestBase {
     TextBoxTestPages textBoxTestPages = new TextBoxTestPages();
 
@@ -11,12 +13,12 @@ public class TextBoxTest extends TestBase {
 
         textBoxTestPages.openPage()
                 .deleteFooter()
-                .setUserName("Anna")
-                .setUserEmail("Anna@mail.ru")
-                .setCurrentAddress("Moscow")
-                .setPermanentAddress("Syberia")
+                .setUserName(firstNameValue)
+                .setUserEmail(emailValue)
+                .setCurrentAddress(addressValue)
+                .setPermanentAddress(addressValue)
                 .setSubmitButton();
 
-        textBoxTestPages.checkResult("Anna");
+        textBoxTestPages.checkResult(firstNameValue);
     }
 }

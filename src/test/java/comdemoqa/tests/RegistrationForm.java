@@ -17,7 +17,7 @@ public class RegistrationForm extends TestBase {
                 .setUserEmail(emailValue)
                 .setGenderWrapper(genderValue)
                 .setUserNumber(phoneNumber)
-                .setBirthDate(monthValue, yearValue, dayValue)
+                .setBirthDate(dayValue,monthValue, yearValue )
                 .setSubjects(subjectsValue)
                 .setHobbiesWrapper(hobbiesValue)
                 .uploadPicture(fileNameValue)
