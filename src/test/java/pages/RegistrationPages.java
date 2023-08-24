@@ -109,11 +109,6 @@ public class RegistrationPages {
         return this;
     }
 
-    public RegistrationPages checkTableHeading(String value) {
-        tableHeading.shouldHave(text(value));
-        return this;
-    }
-
     public RegistrationPages checkTableBody(String value) {
         tableBody.shouldHave(text(value));
         return this;

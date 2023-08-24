@@ -1,4 +1,5 @@
 package utils;
+
 import com.github.javafaker.Faker;
 
 import static utils.JavaFaker.fakerEn;
@@ -27,7 +28,7 @@ public class GetRandom {
     }
 
     public static String getRandomGender() {
-        String[] genders =  {"Male", "Female", "Other"};
+        String[] genders = {"Male", "Female", "Other"};
         return new Faker().options().option(genders);
     }
 
@@ -36,7 +37,7 @@ public class GetRandom {
     }
 
     public static String getRandomMonth() {
-        String[] months =  {"January", "February", "March", "April", "May", "June",
+        String[] months = {"January", "February", "March", "April", "May", "June",
                 "July", "August", "September", "October", "November", "December"};
         return new Faker().options().option(months);
     }
@@ -55,12 +56,12 @@ public class GetRandom {
     }
 
     public static String getRandomSubjects() {
-        String[] subjects =  {"Math","Biology", "Chemistry",};
+        String[] subjects = {"Math", "Biology", "Chemistry",};
         return new Faker().options().option(subjects);
     }
 
     public static String getRandomHobbies() {
-        String[] hobbies =  {"Sports", "Reading", "Music"};
+        String[] hobbies = {"Sports", "Reading", "Music"};
         return new Faker().options().option(hobbies);
     }
 
@@ -69,26 +70,26 @@ public class GetRandom {
     }
 
     public static String getRandomState() {
-        String[] states =  {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
+        String[] states = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
         return new Faker().options().option(states);
     }
 
     public static String getRandomCity(String stateValue) {
         switch (stateValue) {
             case "NCR": {
-                String[] city =  {"Delhi", "Gurgaon", "Noida"};
+                String[] city = {"Delhi", "Gurgaon", "Noida"};
                 return new Faker().options().option(city);
             }
             case "Uttar Pradesh": {
-                String[] city =  {"Agra", "Lucknow", "Merrut"};
+                String[] city = {"Agra", "Lucknow", "Merrut"};
                 return new Faker().options().option(city);
             }
             case "Haryana": {
-                String[] city =  {"Karnal", "Panipat"};
+                String[] city = {"Karnal", "Panipat"};
                 return new Faker().options().option(city);
             }
             case "Rajasthan": {
-                String[] city =  {"Jaipur", "Jaiselmer"};
+                String[] city = {"Jaipur", "Jaiselmer"};
                 return new Faker().options().option(city);
             }
         }

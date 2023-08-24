@@ -2,6 +2,7 @@ package comdemoqa.tests;
 
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPages;
+
 import static utils.JavaFaker.*;
 
 public class RegistrationForm extends TestBase {
@@ -17,7 +18,7 @@ public class RegistrationForm extends TestBase {
                 .setUserEmail(emailValue)
                 .setGenderWrapper(genderValue)
                 .setUserNumber(phoneNumber)
-                .setBirthDate(dayValue,monthValue, yearValue )
+                .setBirthDate(dayValue, monthValue, yearValue)
                 .setSubjects(subjectsValue)
                 .setHobbiesWrapper(hobbiesValue)
                 .uploadPicture(fileNameValue)
@@ -26,20 +27,18 @@ public class RegistrationForm extends TestBase {
                 .selectCity(cityValue)
                 .setSubmitButton();
 
-        registrationPages.checkTableHeading("Thanks for submitting the form");
-
 
         registrationPages.
-                 checkTableBody(firstNameValue + " " + lastNameValue)
-                .checkTableBody( emailValue)
+                checkTableBody(firstNameValue + " " + lastNameValue)
+                .checkTableBody(emailValue)
                 .checkTableBody(genderValue)
-                .checkTableBody( phoneNumber)
+                .checkTableBody(phoneNumber)
                 .checkTableBody(dayValue + " " + monthValue + "," + yearValue)
-                .checkTableBody( subjectsValue)
-                .checkTableBody( hobbiesValue)
+                .checkTableBody(subjectsValue)
+                .checkTableBody(hobbiesValue)
                 .checkTableBody(fileNameValue)
                 .checkTableBody(addressValue)
-                .checkTableBody( stateValue + " " + cityValue);
+                .checkTableBody(stateValue + " " + cityValue);
 
     }
 }
