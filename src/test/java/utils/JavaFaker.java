@@ -11,7 +11,6 @@ public class JavaFaker {
 
     public static String firstNameValue = getRandomFirstName(),
             lastNameValue = getRandomLastName(),
-            fullNameValue = getRandomFullName(),
             emailValue = getRandomEmail(),
             genderValue = getRandomGender(),
             phoneNumber = getRandomPhoneNumber(),
